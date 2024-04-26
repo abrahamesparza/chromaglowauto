@@ -1,6 +1,9 @@
+.main {
+  background: linear-gradient(to bottom right, rgba(102, 255, 232, 0.5), rgba(249, 139, 255, 0.5));
+}
+
 .container h1 {
   letter-spacing: 1px;
-  font-weight: lighter;
   color: rgb(226, 226, 226);
   text-shadow: 1px 1px 4px #434343;
   font-size: 72px;
@@ -30,24 +33,164 @@
 
 /* sart of sections */
 
-.sectionOne {
+.section {
   display: flex;
   flex-direction: column;
-  background-color: rgb(28, 130, 197);
-}
-.sectionOneText {
-  font-weight: bold;
-  text-shadow: 1px 1px 4px rgb(226, 226, 226);
 }
 
-.sectionTwo {
-  background-color: rgb(87, 28, 197);
+.mainText {
+  margin-top: 20px;
 }
-.sectionThree {
-  background-color: rgb(197, 28, 129);
+
+.secondaryText {
+  margin-top: 20px;
+  font-size: 18px;
+
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px #ffffff;
 }
-.sectionFour {
-  background-color: rgb(28, 197, 73);
+
+.reviewsList {
+  overflow: scroll;
+  width: 75%; 
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #333;
+  padding: 25px;
+  border-radius: 50px;
+  background-color: rgb(68, 68, 68);
+  color: #f3f3f3;
 }
+
+.reviewsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+
+  transition: transform 0.3s ease-in-out;
+}
+.reviews {
+  margin-top: 20px;
+}
+.reviews, .photos {
+  letter-spacing: 1px;
+  font-weight: lighter;
+  text-shadow: 1px 1px 4px #ffffff;
+  font-size: 36px;
+  margin-bottom: 1%;
+}
+
+.reviewName {
+  font-size: 20px;
+}
+
+.arrowLeft, .arrowRight {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #f3f3f3; /* Adjust as needed */
+  z-index: 10;
+  position: relative; /* Keeps the buttons fixed on the page */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2%;
+}
+
+.arrowLeft {
+  right: 5%;
+}
+
+.arrowRight {
+  left: 5%;
+}
+
+.photos {
+  margin-top: 50px;
+}
+
+.photoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.photoContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  width: 100vw;
+  transition: transform 0.3s ease-in-out;
+}
+.imageGallery {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+
+}
+
+.leftButton, .rightButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #4d4d4d;
+  z-index: 10;
+  position: relative;
+}
+
+.leftButton {
+  right: 25px;
+  bottom: 100px;  
+}
+.rightButton {
+  left: 25px;
+  bottom: 100px;
+}
+
 
 /* end of sections */
+
+/* start of bubbles css */
+
+.bubble-gradient-radial {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle, #89CFF0, #4169E1);
+  height: 100vh;
+  width: 100%;
+}
+
+.bubble {
+  position: absolute;
+  background-color: rgba(102, 161, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: floatBubbles 5s infinite ease-in-out;
+  bottom: -50px;
+}
+
+.bubbleTwo {
+  position: absolute;
+  background-color: rgba(218, 139, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: floatBubbles 5s infinite ease-in-out;
+  bottom: -50px;
+}
+
+@keyframes floatBubbles {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-100vh);
+  }
+}
+
+
+/* end of bubbles css */
